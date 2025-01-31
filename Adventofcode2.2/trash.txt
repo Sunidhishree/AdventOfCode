@@ -1,0 +1,50 @@
+7 6 4 2 1
+1 2 7 8 9
+9 7 6 2 1
+1 3 2 4 5
+8 6 4 4 1
+1 3 6 7 9
+    if report==asc:
+        for k in range(0,(len(report)-1)):
+            if (report[k+1]-report[k])>=1 and (report[k+1]-report[k])<=3:
+                safe=1
+            else:
+                safe=0
+                break
+        if safe==1:
+            level+=1
+    elif report==dec:
+        for k in range(0, (len(report)-1)):
+            if abs((report[k + 1] - report[k])) >= 1 and abs((report[k + 1] - report[k])) <= 3:
+                safe = 1
+            else:
+                safe = 0
+                break;
+        if safe == 1:
+            level += 1
+    else:
+        for i in range(0,len(report)):
+            if report[i]==asc[i]:
+                chance+=0
+            else:
+                chance+=1
+                if chance > 1:
+                    break
+
+        for i in range(0,len(report)):
+            if report[i]==dec[i]:
+                chance+=0
+            else:
+                chance+=1
+                if chance > 1:
+                    break
+        if chance>1:
+            level+=0
+        else:
+            level+=1
+
+print(level)
+    for i in range(0, len(dec)):
+        if report[i] != dec[i]:
+            dec.remove(dec[i])
+            break
