@@ -1,0 +1,25 @@
+    for i in func:
+        el=re.findall(r'\d+', i)
+
+        for i in el:
+            if "[" in i:
+                continue
+            i.split(",")
+            num.append(i)
+
+    print(num)
+        for i in el:
+            if "[" in i:
+                continue
+            i.split(",")
+            num.append(i)
+
+    print(num)
+
+  while True:
+    line = input()
+    if line:
+        list.append(line)
+    else:
+        break
+
